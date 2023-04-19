@@ -10,8 +10,7 @@ from applications.libro.models import Libro
 
 class HomePageView(ListView):
     template_name = 'home/index.html'
-    paginate_by = 6
- 
+    
     def get_queryset(self):
         # Obtiene los parámetros de la URL
         kword = self.request.GET.get('kword', '')
