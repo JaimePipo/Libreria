@@ -3,6 +3,8 @@ from django.db import models
 # from local apps
 from applications.autor.models import Autor
 from applications.editorial.models import Editorial
+# managers
+from .managers import LibroManager
 
 # Create your models here.
 
@@ -13,6 +15,8 @@ class Libro(models.Model):
     editorial = models.ForeignKey(Editorial, on_delete=models.CASCADE)
     titulo = models.CharField (max_length=50, unique=True)
     portada = models.ImageField(upload_to='portada', blank=True)
+
+    objects = LibroManager()
 
     class Meta:
         """Meta definition for Libro."""
