@@ -22,6 +22,10 @@ DJANGO_APPS = [
 
 LOCAL_APPS = [
     
+    'applications.Home',
+    'applications.autor',
+    'applications.editorial',
+    'applications.libro',
    
 ]
 
